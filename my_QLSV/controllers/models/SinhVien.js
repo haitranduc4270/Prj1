@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const SinhVien = {
-    name : {type : String, default : "Hai1"},
+    name : {type : String, default : "Hai"},
     MSSV : {type : String, default : "-1"},
     Lop : {type : String, default : "-1"},
     Khoa : {type : String, default : "0"},

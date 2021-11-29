@@ -7,6 +7,13 @@ var logger = require('morgan');
 let db = require('./config/db/connect')
 let indexRouter = require('./routes/SinhVien');
 
+const cors=require("cors");
+const corsOptions ={
+   origin:'*', 
+   credentials:true,            //access-control-allow-credentials:true
+   optionSuccessStatus:200,
+}
+
 
 db.connect();
 var app = express();
@@ -15,6 +22,7 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));  // cái này là để xác định bất cứ thứ gì liên quan đến view nó sẽ tìm trong thư mục nào
 app.set('view engine', 'pug');  // xác định loại template engine
 
+app.use(cors(corsOptions)) // Use this after the variable declaration
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -22,7 +30,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-app.use('/SinhVien', indexRouter);
+app.use('/Students', indexRouter);
 
 
 // catch 404 and forward to error handler

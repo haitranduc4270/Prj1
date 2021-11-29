@@ -1,45 +1,41 @@
 const SinhVien = require('./models/SinhVien')
 const mongooseToObject = require('../util/mongoose')
 
-class index   {
+class StudentRouter   {
     async GetSinhVien(req, res, next) {
-        await SinhVien.find({})
-            .then(SinhVien => {
-                res.json(mongooseToObject.multipleMongooseToObject(SinhVien))
-            })
-
+        let allStudents = await SinhVien.find({});
+        res.json(mongooseToObject.multipleMongooseToObject(allStudents ));
+        
     }
 
     async GetOneSinhVien (req, res, next) {
         let s = req.params.MSSV;
-        await SinhVien.findOne({MSSV : s})
-            .then(SinhVien => {
-                res.json(mongooseToObject.mongooseToObject(SinhVien))
-            })
+        let oneStudent =  await SinhVien.findOne({MSSV : s});
+        res.json(mongooseToObject.mongooseToObject(oneStudent))
+            
     } 
 
 
     async PostSinhVien (req, res, next) {
         let tmp = req.body;
         await SinhVien.create(tmp);
-        res.redirect('/SinhVien');
+        res.redirect(303, '/Students');
         
     }
 
     async PutSinhVien (req, res, next) {
         let tmp = req.params;
         await SinhVien.findOneAndUpdate({MSSV : tmp.MSSV}, req.body);
-        SinhVien.findOne({MSSV : tmp.MSSV})
-            .then(SinhVien => {
-                res.json(mongooseToObject.mongooseToObject(SinhVien))
-            })
-
+        res.redirect(303, '/Students');
+        
+        
     }
 
     async DeleteOneSinhVien (req, res, next) {
         let tmp = req.params.MSSV;
         await SinhVien.deleteMany({MSSV : tmp});
-        res.send(`Deleted MSSV : ${tmp}`);
+        res.redirect(303, '/Students');
+        
     } 
 
 
@@ -47,5 +43,5 @@ class index   {
 
 
 
-module.exports = new index();
+module.exports = new StudentRouter();
 

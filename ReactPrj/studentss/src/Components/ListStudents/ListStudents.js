@@ -27,9 +27,9 @@ class ListStudents extends React.Component{
                 <div className = "students-list">
                     <table className = "students-list__table">
                         <tbody>
-                            <TableHeader></TableHeader>
+                            <TableHeader key = "Header"></TableHeader>
                             {this.renderTableStudent()}
-                            <TableFooter updateFromChild = {this.updateFromChild} ></TableFooter>
+                            <TableFooter key = "Footer" updateFromChild = {this.updateFromChild} ></TableFooter>
                         </tbody>
                     </table>
                 </div>
@@ -59,10 +59,10 @@ class ListStudents extends React.Component{
     
     renderTableStudent = () => {
         
-        return this.state.studentsInfo.map((student) => {
+        return this.state.studentsInfo.map((student, index) => {
             return (
-                <Student key = {student.ID} student = {student} updateFromChild = {this.updateFromChild}  ></Student>
-            )
+                <Student key = {index} student = {student} updateFromChild = {this.updateFromChild}  ></Student>
+            )   // hạn chế sử dụng index làm khóa - sau sẽ đổi thành MSSV khi xử lý MSSV không trùng ở sever
         })
     }
 

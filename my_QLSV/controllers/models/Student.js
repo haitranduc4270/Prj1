@@ -7,7 +7,7 @@ const Student = {
     class : {type : String, default : "IT2 - 02"},
     khoa : {type : String, default : "64"},
     email : {type : String, default : "email@email.com"},
-    SDT : {type : String, default : "-0322562568"},
+    SDT : {type : String, default : "0322562568"},
     image : {type : String, default : "https://img.nhandan.com.vn/Files/Images/2020/07/26/nhat_cay-1595747664059.jpg"},
     address : {type : String, default : "Ha Tay"},
 

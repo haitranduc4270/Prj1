@@ -6,7 +6,7 @@ import './ListStudents.css'
 class TableHeader extends React.Component {
     render () {
         return  (
-            <tr key = "Header">
+            <tr>
                 <td key = "1"  className = "students-list__table__name-column">Họ Tên</td>
                 <td key = "2"  className = "students-list__table__MSSV-column">MSSV</td>
                 <td key = "3"  className = "students-list__table__class-column">Lớp</td>

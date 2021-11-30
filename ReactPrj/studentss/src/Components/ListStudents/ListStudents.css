@@ -1,0 +1,119 @@
+.students-list {
+        margin-left: 50px;
+    }
+    
+    table {
+        border-collapse: collapse;  
+    }
+    
+    th, td {
+        padding: 10px;
+        text-align: left;
+        border:1px solid rgba(155, 241, 223, 0.822);
+        
+    }
+    
+    th{
+        background-color: #eee;
+    }
+    
+    button {
+        height: 30px;
+        width: 70px;
+        padding: 0px;
+        text-align: center;
+        background-color: rgba(155, 241, 223, 0.822);
+        
+    }
+
+    
+    
+.students-list__table__name-column {
+    min-width: 200px;
+    
+    
+}
+.students-list__table__MSSV-column {
+    min-width: 100px;
+    
+    
+}
+.students-list__table__class-column {
+    min-width: 80px;
+    
+    
+}
+.students-list__table__khoa-column {
+    min-width: 60px;
+    
+}
+.students-list__table__email-column {
+    min-width: 200px;
+    
+}
+.students-list__table__sdt-column {
+    min-width: 100px;
+    
+}
+.students-list__table__address-column {
+    min-width: 100px;
+}
+.students-list__table__modifier-column {
+    min-width: 60px;
+}
+.students-list__table__delete-column {
+    min-width: 60px;
+}
+.students-list__table__detail-column {
+    min-width: 60px;
+}
+
+
+.students-list__table__name-input-column--on-modifier {
+    max-width: 180px;
+}
+.students-list__table__MSSV-input-column--on-modifier {
+    max-width: 80px;
+}
+.students-list__table__class-input-column--on-modifier {
+    max-width: 60px;
+}
+.students-list__table__khoa-input-column--on-modifier {
+    max-width: 50px;
+}
+.students-list__table__email-input-column--on-modifier{
+    max-width: 170px;
+}
+.students-list__table__sdt-input-column--on-modifier {
+    max-width: 90px;
+}
+.students-list__table__address-input-column--on-modifier{
+    max-width: 90px;
+}
+
+    
+
+.students-list__table__name-input-column--on-add {
+    max-width: 180px;
+}
+.students-list__table__MSSV-input-column--on-add {
+    max-width: 80px;
+}
+.students-list__table__class-input-column--on-add {
+    max-width: 60px;
+}
+.students-list__table__khoa-input-column--on-add {
+    max-width: 50px;
+}
+.students-list__table__email-input-column--on-add{
+    max-width: 170px;
+}
+.students-list__table__sdt-input-column--on-add {
+    max-width: 90px;
+}
+.students-list__table__address-input-column--on-add{
+    max-width: 90px;
+}
+
+    
+    

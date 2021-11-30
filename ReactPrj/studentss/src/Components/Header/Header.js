@@ -1,22 +1,22 @@
 import React from 'react';
-import './style.css'
+import './Header.css'
 
 
 class Header extends React.Component {
     render () {
         return (
             <header>
-                <button id="Student-list-button">
-                        Student List
+                <button id="mainPageButton">
+                        Main Page
                 </button>
 
-                <button id="Add-Student-button">
-                        Add Student
+                <button id="listStudentButton">
+                        List Student
                 </button>
 
-                <div className="Search">
-                    <input type="text" name="" id="Search" title="Search" /> 
-                    <button id="Search-by-MSSV-button">
+                <div className="search-box">
+                    <input type="text" name="" className="search-box__input" title="Search" /> 
+                    <button className="search-box__submit-button">
                         Search by MSSV
                     </button>
                 </div>

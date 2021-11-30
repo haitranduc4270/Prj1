@@ -1,13 +1,13 @@
 var express = require('express');
 var router = express.Router();
-let SinhVien= require('../controllers/SinhVienController')
+let studentController = require('../controllers/StudentController')
 
 /* GET home page. */
-router.get('/', SinhVien.GetSinhVien);
-router.post('/', SinhVien.PostSinhVien);
-router.put('/:MSSV', SinhVien.PutSinhVien);
-router.delete('/:MSSV', SinhVien.DeleteOneSinhVien);
-router.get('/:MSSV', SinhVien.GetOneSinhVien);
+router.get('/',studentController.getStudents);
+router.post('/', studentController.postStudent);
+router.put('/:MSSV', studentController.putStudent);
+router.delete('/:MSSV', studentController.deleteStudent);
+router.get('/:MSSV', studentController.getStudent);
 
 
 
